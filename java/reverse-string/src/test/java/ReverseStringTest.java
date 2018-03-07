@@ -25,7 +25,6 @@ public class ReverseStringTest {
         assertEquals("!yrgnuh m'I", new ReverseString().reverse("I'm hungry!"));
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void testAPalindrome() {
         assertEquals("racecar", new ReverseString().reverse("racecar"));

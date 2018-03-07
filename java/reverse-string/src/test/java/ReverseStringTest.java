@@ -15,7 +15,6 @@ public class ReverseStringTest {
         assertEquals("tobor", new ReverseString().reverse("robot"));
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void testACapitalizedWord() {
         assertEquals("nemaR", new ReverseString().reverse("Ramen"));

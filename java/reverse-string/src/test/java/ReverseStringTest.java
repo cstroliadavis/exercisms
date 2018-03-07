@@ -20,7 +20,6 @@ public class ReverseStringTest {
         assertEquals("nemaR", new ReverseString().reverse("Ramen"));
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void testASentenceWithPunctuation() {
         assertEquals("!yrgnuh m'I", new ReverseString().reverse("I'm hungry!"));

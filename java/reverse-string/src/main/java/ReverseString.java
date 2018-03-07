@@ -1,7 +1,8 @@
 class ReverseString {
 
     String reverse(String inputString) {
-        return  inputString == "" ? "" : "tobor";
+        StringBuilder builder = new StringBuilder(inputString);
+        return  builder.reverse().toString();
     }
   
 }

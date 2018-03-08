@@ -7,7 +7,7 @@ describe "HelloWorld", ->
     result = hello_world.hello()
     expect(result).toEqual "Hello, World!"
 
-  xit "given the name 'Alice'", ->
+  it "given the name 'Alice'", ->
     result = hello_world.hello 'Alice'
     expect(result).toEqual "Hello, Alice!"
 

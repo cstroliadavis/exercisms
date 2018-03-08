@@ -14,6 +14,7 @@ class RnaTranscription {
         result.put("C", "G");
         result.put("G", "C");
         result.put("T", "A");
+        result.put("A", "U");
         return Collections.unmodifiableMap(result);
     }
 }

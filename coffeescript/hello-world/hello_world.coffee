@@ -1,4 +1,2 @@
-class HelloWord
-  hello: (name) -> 'Hello, World!'
-
-module.exports = HelloWord;
+module.exports = class HelloWorld
+  hello: (name = 'World') -> "Hello, #{ name }!"

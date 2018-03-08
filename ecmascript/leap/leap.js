@@ -4,6 +4,6 @@ export default class Year {
     }
 
     isLeap() {
-        return false;
+        return this.year % 4 === 0;
     }
 }

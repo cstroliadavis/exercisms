@@ -1,7 +1,9 @@
-var HelloWorld = function () {};
-
-HelloWorld.prototype.hello = function () {
-    return 'Hello, World!';
+module.exports = function HelloWorld() {
+    this.hello = hello;
 };
 
-module.exports = HelloWorld;
+function hello(){
+    return 'Hello, World!';
+}
+
+

@@ -18,7 +18,6 @@ public class RnaTranscriptionTest {
         assertEquals("G", rnaTranscription.transcribe("C"));
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void testRnaTranscriptionOfGuanineIsCytosine() {
         assertEquals("C", rnaTranscription.transcribe("G"));

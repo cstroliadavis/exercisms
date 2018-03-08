@@ -6,6 +6,7 @@
 **/bin/
 **/build/
 **/out/
+**/node_modules/
 
 **/*.iml
 **/*.sln

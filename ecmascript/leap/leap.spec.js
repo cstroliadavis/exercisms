@@ -6,7 +6,7 @@ describe('A leap year', () => {
     expect(year.isLeap()).toBeFalsy();
   });
 
-  xtest('year divisible by 4, not divisible by 100: leap year', () => {
+  test('year divisible by 4, not divisible by 100: leap year', () => {
     const year = new Year(2016);
     expect(year.isLeap()).toBeTruthy();
   });

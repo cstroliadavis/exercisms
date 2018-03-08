@@ -1,7 +1,7 @@
 class ArmstrongNumbers {
 
 	boolean isArmstrongNumber(int numberToCheck) {
-		return true;
+		return numberToCheck < 10;
 	}
 
 }

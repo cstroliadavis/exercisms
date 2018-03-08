@@ -11,6 +11,6 @@ describe "HelloWorld", ->
     result = hello_world.hello 'Alice'
     expect(result).toEqual "Hello, Alice!"
 
-  xit "given the name 'Bob'", ->
+  it "given the name 'Bob'", ->
     result = hello_world.hello 'Bob'
     expect(result).toEqual "Hello, Bob!"

@@ -56,7 +56,6 @@ public class ArmstrongNumbersTest {
         assertFalse(armstrongNumbers.isArmstrongNumber(input));
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void sevenDigitNumberIsArmstrongNumber() {
         int input = 9926315;

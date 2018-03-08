@@ -42,7 +42,6 @@ public class ArmstrongNumbersTest {
         assertFalse(armstrongNumbers.isArmstrongNumber(input));
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void fourDigitNumberIsArmstrongNumber() {
         int input = 9474;

@@ -11,4 +11,6 @@
 **/*.iml
 **/*.sln
 
+**/yarn-error.log
+
 exercism.exe

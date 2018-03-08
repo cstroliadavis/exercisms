@@ -1,7 +1,13 @@
 **/.idea/
 **/.gradle/
+**/.vs/
+
+**/obj/
+**/bin/
 **/build/
 **/out/
 
 **/*.iml
+**/*.sln
+
 exercism.exe

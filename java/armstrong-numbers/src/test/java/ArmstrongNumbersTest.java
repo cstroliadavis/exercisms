@@ -21,7 +21,6 @@ public class ArmstrongNumbersTest {
         assertTrue(armstrongNumbers.isArmstrongNumber(input));
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void noTwoDigitArmstrongNumbers() {
         int input = 10;

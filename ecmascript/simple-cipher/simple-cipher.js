@@ -1,9 +1,13 @@
 export default class Cipher {
-  constructor(){
+  constructor() {
     this.key = 'aaaaaaaaaa';
   }
 
-  encode(){
+  encode() {
+    return this.key;
+  }
+
+  decode() {
     return this.key;
   }
 }

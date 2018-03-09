@@ -25,7 +25,7 @@ describe('Random key cipher', () => {
 });
 
 describe('Incorrect key cipher', () => {
-  xtest('throws an error with an all caps key', () => {
+  test('throws an error with an all caps key', () => {
     expect(() => {
       new Cipher('ABCDEF');
     }).toThrow(new Error('Bad key'));

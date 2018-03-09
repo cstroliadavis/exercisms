@@ -3,11 +3,11 @@ export default class Cipher {
     this.key = 'aaaaaaaaaa';
   }
 
-  encode() {
-    return this.key;
+  encode(value) {
+    return value;
   }
 
-  decode() {
-    return this.key;
+  decode(value) {
+    return value;
   }
 }

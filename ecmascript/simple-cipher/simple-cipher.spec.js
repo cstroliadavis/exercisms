@@ -48,7 +48,7 @@ describe('Substitution cipher', () => {
   const key = 'abcdefghij';
   const cipher = new Cipher(key);
 
-  xtest('keeps the submitted key', () => {
+  test('keeps the submitted key', () => {
     expect(cipher.key).toEqual(key);
   });
 

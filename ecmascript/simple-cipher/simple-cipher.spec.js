@@ -52,7 +52,7 @@ describe('Substitution cipher', () => {
     expect(cipher.key).toEqual(key);
   });
 
-  xtest('can encode', () => {
+  test('can encode', () => {
     expect(cipher.encode('aaaaaaaaaa')).toEqual('abcdefghij');
   });
 

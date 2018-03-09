@@ -4,10 +4,10 @@ export default class Year {
     }
 
     isLeap() {
-        const [isDivisBy4, isDivisBy100] = [4, 100]
+        const [isDivisBy4, isDivisBy100, isDivisBy400] = [4, 100, 400]
             .map(n => this.year % n === 0);
         const isNotDivisBy100 = !isDivisBy100;
 
-        return isNotDivisBy100 && isDivisBy4;
+        return (isNotDivisBy100 || isDivisBy400) && isDivisBy4;
     }
 }

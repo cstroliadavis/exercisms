@@ -1,5 +1,11 @@
+const CONVERSIONS = {
+    'C': 'G',
+    'G': 'C',
+    'A': 'U'
+};
+
 export default class Transcriptor {
     toRna(dna){
-        return dna === 'C' ? 'G' : 'C';
+        return CONVERSIONS[dna];
     }
 }

@@ -4,20 +4,16 @@ const CONVERSIONS = {
     'A': 'U',
     'T': 'A'
 };
+const validChars = new RegExp(`^[${Object.keys(CONVERSIONS).join('')}]+$`);
 
 export default class Transcriptor {
     toRna(dna){
-        return dna
-            .split('')
-            .map(transcribeDnaCharToRna)
-            .join('');
+        if(dna.match(validChars)){
+            return dna
+                .split('')
+                .map(c => CONVERSIONS[c])
+                .join('');
+        }
+        throw new Error('Invalid input DNA.');
     }
-}
-
-function transcribeDnaCharToRna(chr){
-    const out = CONVERSIONS[chr];
-    if(out) {
-        return out;
-    }
-    throw new Error('Invalid input DNA.');
 }

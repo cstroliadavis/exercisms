@@ -11,7 +11,7 @@ describe('Transcriptor', () => {
     expect(transcriptor.toRna('G')).toEqual('C');
   });
 
-  xtest('transcribes adenine to uracil', () => {
+  test('transcribes adenine to uracil', () => {
     expect(transcriptor.toRna('A')).toEqual('U');
   });
 

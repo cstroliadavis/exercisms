@@ -7,6 +7,9 @@ const CONVERSIONS = {
 
 export default class Transcriptor {
     toRna(dna){
-        return CONVERSIONS[dna];
+        return dna
+            .split('')
+            .map(i => CONVERSIONS[i])
+            .join('');
     }
 }

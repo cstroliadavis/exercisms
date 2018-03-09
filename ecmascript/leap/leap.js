@@ -1,12 +1,11 @@
 export default class Year {
     constructor(year) {
-        this.year = year;
+        this.determineYearFactor = determineFactor(year);
     }
 
     isLeap() {
-        const determineYearFactor = determineFactor(this.year);
         const [isDivisBy4, isDivisBy100, isDivisBy400] = [4, 100, 400]
-            .map(determineYearFactor);
+            .map(this.determineYearFactor);
         const isNotDivisBy100 = !isDivisBy100;
 
         return (isNotDivisBy100 || isDivisBy400) && isDivisBy4;

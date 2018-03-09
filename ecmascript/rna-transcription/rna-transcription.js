@@ -8,7 +8,7 @@ const VALID_CHARS = /^[CGAT]*$/;
 
 export default class Transcriptor {
     toRna(dna){
-        if(dna.match(VALID_CHARS)){
+        if(VALID_CHARS.test(dna)){
             return dna
                 .split('')
                 .map(c => CONVERSIONS[c])

@@ -7,7 +7,7 @@ describe('Transcriptor', () => {
     expect(transcriptor.toRna('C')).toEqual('G');
   });
 
-  xtest('transcribes guanine to cytosine', () => {
+  test('transcribes guanine to cytosine', () => {
     expect(transcriptor.toRna('G')).toEqual('C');
   });
 

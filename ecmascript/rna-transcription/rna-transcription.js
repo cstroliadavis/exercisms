@@ -9,7 +9,15 @@ export default class Transcriptor {
     toRna(dna){
         return dna
             .split('')
-            .map(i => CONVERSIONS[i])
+            .map(transcribeDnaCharToRna)
             .join('');
     }
+}
+
+function transcribeDnaCharToRna(chr){
+    const out = CONVERSIONS[chr];
+    if(out) {
+        return out;
+    }
+    throw new Error('Invalid input DNA.');
 }

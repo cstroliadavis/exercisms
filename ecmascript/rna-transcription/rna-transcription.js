@@ -4,11 +4,11 @@ const CONVERSIONS = {
     'A': 'U',
     'T': 'A'
 };
-const validChars = new RegExp(`^[${Object.keys(CONVERSIONS).join('')}]+$`);
+const VALID_CHARS = /^[CGAT]*$/;
 
 export default class Transcriptor {
     toRna(dna){
-        if(dna.match(validChars)){
+        if(dna.match(VALID_CHARS)){
             return dna
                 .split('')
                 .map(c => CONVERSIONS[c])

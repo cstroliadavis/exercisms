@@ -1,7 +1,8 @@
 const CONVERSIONS = {
     'C': 'G',
     'G': 'C',
-    'A': 'U'
+    'A': 'U',
+    'T': 'A'
 };
 
 export default class Transcriptor {

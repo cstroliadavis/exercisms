@@ -4,9 +4,9 @@ export default class Year {
     }
 
     isLeap() {
-        const [isDivisBy4, isDivisBy100, isDivisBy400] = [4, 100, 400]
-            .map(this.determineYearFactor);
-        const isNotDivisBy100 = !isDivisBy100;
+        const isDivisBy4 = this.determineYearFactor(4);
+        const isNotDivisBy100 = !this.determineYearFactor(100);
+        const isDivisBy400 = this.determineYearFactor(400);
 
         return (isNotDivisBy100 || isDivisBy400) && isDivisBy4;
     }

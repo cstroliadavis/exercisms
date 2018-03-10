@@ -22,8 +22,12 @@ function arrToObject(list, valueAsKey = true){
 
 function loopShift(min, max, index, amount = 0){
   let newIndex = index + amount;
+  let maxShift = max + 1;
+  while (newIndex < min){
+    newIndex += maxShift;
+  }
   while (newIndex > max){
-    newIndex -= (max + 1);
+    newIndex -= maxShift;
   }
   newIndex += min;
   return newIndex;
@@ -76,6 +80,7 @@ export default class Cipher {
   }
 
   decode(value) {
-    return util.charMapper(value, this.keyDecoder);
+    let val = util.charMapper(value, this.keyDecoder);
+    return val;
   }
 }

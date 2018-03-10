@@ -69,7 +69,7 @@ describe('Substitution cipher', () => {
       .toEqual('qayaeaagaciai');
   });
 
-  xtest('can wrap on encode', () => {
+  test('can wrap on encode', () => {
     expect(cipher.encode('zzzzzzzzzz')).toEqual('zabcdefghi');
   });
 

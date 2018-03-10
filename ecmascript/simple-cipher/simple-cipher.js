@@ -70,7 +70,7 @@ export default class Cipher {
     if(!VALID_KEY.test(key)){
       throw new Error('Bad key');
     }
-    this.key = key || 'aaaaaaaaaa';
+    this.key = key || 'a'.repeat(100);
     this.keyEncoder = keyCoder(this.key, util.makeLoopShifter(0, this.key.length -1));
     this.keyDecoder = keyCoder(this.key, util.makeLoopShifter(0, this.key.length -1), false);
   }

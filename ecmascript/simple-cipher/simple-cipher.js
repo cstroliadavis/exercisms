@@ -38,7 +38,7 @@ function makeLoopShifter(min, max){
 }
 
 function charMapper(text, mapper){
-  return text.split('').map(mapper).join('');
+  return [...text].map(mapper).join('');
 }
 
 
@@ -46,7 +46,7 @@ function charMapper(text, mapper){
 
 // import util from './util';
 const VALID_KEY = /^[a-z]+$/;
-const NUM_TO_ALPHA = 'abcdefghijklmnopqrstuvwxyz'.split('');
+const NUM_TO_ALPHA = [...'abcdefghijklmnopqrstuvwxyz'];
 const ALPHA_TO_NUM = util.arrToObject(NUM_TO_ALPHA);
 console.log(ALPHA_TO_NUM);
 

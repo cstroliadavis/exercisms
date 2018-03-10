@@ -64,7 +64,7 @@ describe('Substitution cipher', () => {
     expect(cipher.decode(cipher.encode('abcdefghij'))).toEqual('abcdefghij');
   });
 
-  xtest(': double shift encode', () => {
+  test(': double shift encode', () => {
     expect(new Cipher('iamapandabear').encode('iamapandabear'))
       .toEqual('qayaeaagaciai');
   });

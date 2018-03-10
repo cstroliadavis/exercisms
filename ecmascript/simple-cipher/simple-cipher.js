@@ -23,7 +23,7 @@ function arrToObject(list, valueAsKey = true){
 function loopShift(min, max, index, amount = 0){
   let newIndex = index + amount;
   while (newIndex > max){
-    newIndex -= maxl
+    newIndex -= max
   }
   newIndex += min;
   return newIndex;

@@ -22,12 +22,12 @@ function arrToObject(list, valueAsKey = true){
 
 function loopShift(min, max, index, amount = 0){
   let newIndex = index + amount;
-  let maxShift = max + 1;
+  let shift = max - min + 1;
   while (newIndex < min){
-    newIndex += maxShift;
+    newIndex += shift;
   }
   while (newIndex > max){
-    newIndex -= maxShift;
+    newIndex -= shift;
   }
   newIndex += min;
   return newIndex;

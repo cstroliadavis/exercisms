@@ -64,13 +64,19 @@ function keyCoder(key, keyShifter, encodeMod = true){
   }
 }
 
+function generateRandomKey(size){
+  return util.charMapper(
+    ' '.repeat(size),
+    () => NUM_TO_ALPHA[Math.floor(Math.random() * NUM_TO_ALPHA.length)]
+  );
+}
 
 export default class Cipher {
   constructor(key) {
     if(!VALID_KEY.test(key)){
       throw new Error('Bad key');
     }
-    this.key = key || 'a'.repeat(100);
+    this.key = key || generateRandomKey(100);
     this.keyEncoder = keyCoder(this.key, util.makeLoopShifter(0, this.key.length -1));
     this.keyDecoder = keyCoder(this.key, util.makeLoopShifter(0, this.key.length -1), false);
   }

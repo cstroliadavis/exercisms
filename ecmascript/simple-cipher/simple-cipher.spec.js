@@ -11,6 +11,11 @@ describe('Random key cipher', () => {
     expect(cipher.key.length).toBe(100);
   });
 
+  // NOTE: since key is randomly generated, it is non-deterministic, which
+  // means, although there is a miniscule chance in this case, it's not
+  // impossible for the following test to fail with valid code.
+  // Therefore, this is not truly a unit test. Care should be exercised whenever
+  // considering tests like these in a unit test suite.
   test('is randomly generated', () => {
     const newCipher = new Cipher();
     expect(cipher.key).not.toBe(newCipher.key);

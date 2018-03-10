@@ -7,6 +7,10 @@ describe('Random key cipher', () => {
     expect(cipher.key).toMatch(/^[a-z]+$/);
   });
 
+  test('has a key of length 100', () => {
+    expect(cipher.key.length).toBe(100);
+  });
+
   // Here we take advantage of the fact that plaintext of "aaa..."
   // outputs the key. This is a critical problem with shift ciphers, some
   // characters will always output the key verbatim.
@@ -81,4 +85,7 @@ describe('Substitution cipher', () => {
     expect(new Cipher('abc').encode('iamapandabear'))
       .toEqual('iboaqcnecbfcr');
   });
+
 });
+
+

@@ -77,7 +77,7 @@ describe('Substitution cipher', () => {
     expect(cipher.decode('zabcdefghi')).toEqual('zzzzzzzzzz');
   });
 
-  xtest('can handle messages longer than the key', function() {
+  test('can handle messages longer than the key', function() {
     expect(new Cipher('abc').encode('iamapandabear'))
       .toEqual('iboaqcnecbfcr');
   });

@@ -11,6 +11,11 @@ describe('Random key cipher', () => {
     expect(cipher.key.length).toBe(100);
   });
 
+  test('is randomly generated', () => {
+    const newCipher = new Cipher();
+    expect(cipher.key).not.toBe(newCipher.key);
+  });
+
   // Here we take advantage of the fact that plaintext of "aaa..."
   // outputs the key. This is a critical problem with shift ciphers, some
   // characters will always output the key verbatim.

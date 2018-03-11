@@ -86,7 +86,6 @@ export default class Cipher {
   }
 
   decode(value) {
-    let val = util.charMapper(value, this.keyDecoder);
-    return val;
+    return util.charMapper(value, this.keyDecoder);
   }
 }

@@ -1,22 +1,15 @@
-/* eslint-disable no-unused-vars */
-//
-// This is only a SKELETON file for the 'Bob' exercise. It's been provided as a
-// convenience to get you started writing code faster.
-//
+const RESPONSES = {
+  'Shouting': 'Whoa, chill out!',
+  'Question': 'Sure.',
+  'ShoutingQuestion': 'Calm down, I know what I\'m doing!',
+  '': 'Whatever.'
+};
 
 export default class Bob {
   hey(message) {
-    const isShouting = message.toUpperCase() === message;
-    const isQuestion = message.endsWith('?');
-    if(isShouting){
-      if(isQuestion){
-        return 'Calm down, I know what I\'m doing!';
-      }
-      return 'Whoa, chill out!';
-    }
-    if(isQuestion){
-      return 'Sure.';
-    }
-    return 'Whatever.';
+    let whatsHappening = '';
+    whatsHappening += message.toUpperCase() === message ? 'Shouting' : '';
+    whatsHappening += message.endsWith('?') ? 'Question' : '';
+    return RESPONSES[whatsHappening];
   }
 }

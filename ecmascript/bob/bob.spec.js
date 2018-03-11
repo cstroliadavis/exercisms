@@ -78,7 +78,7 @@ describe('Bob', () => {
     expect(result).toEqual('Sure.');
   });
 
-  xtest('silence', () => {
+  test('silence', () => {
     const result = bob.hey('');
     expect(result).toEqual('Fine. Be that way!');
   });

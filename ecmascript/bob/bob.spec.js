@@ -28,12 +28,12 @@ describe('Bob', () => {
     expect(result).toEqual('Calm down, I know what I\'m doing!');
   });
 
-  xtest('using acronyms in regular speech', () => {
+  test('using acronyms in regular speech', () => {
     const result = bob.hey("It's OK if you don't want to go to the DMV.");
     expect(result).toEqual('Whatever.');
   });
 
-  xtest('shouting numbers', () => {
+  test('shouting numbers', () => {
     const result = bob.hey('1, 2, 3 GO!');
     expect(result).toEqual('Whoa, chill out!');
   });

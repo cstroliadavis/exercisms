@@ -1,5 +1,9 @@
 export default class Pangram {
+  constructor(text){
+    this.text = text;
+  }
+
   isPangram(){
-    return false;
+    return !!this.text;
   }
 }

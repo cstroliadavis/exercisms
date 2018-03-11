@@ -6,6 +6,10 @@
 
 export default class Bob {
   hey(message) {
+    const isShouting = message.toUpperCase() === message;
+    if(isShouting){
+      return 'Whoa, chill out!';
+    }
     return 'Whatever.';
   }
 }

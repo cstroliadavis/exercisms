@@ -4,6 +4,6 @@ export default class Pangram {
   }
 
   isPangram(){
-    return !!this.text;
+    return !!this.text && this.text.includes('x');
   }
 }

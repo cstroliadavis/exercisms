@@ -4,13 +4,8 @@
 // convenience to get you started writing code faster.
 //
 
-class Bob {
+export default class Bob {
   hey(message) {
-    //
-    // YOUR CODE GOES HERE
-    //
+    return 'Whatever.';
   }
 }
-
-export default Bob;
-

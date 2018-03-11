@@ -1,21 +1,21 @@
-const CONTAINS_LETTERS = /[a-z]+/i;
+const HAS_UPPER = /[A-Z]+/;
 const RESPONSES = {
-  'SpeakingShouting': 'Whoa, chill out!',
-  'SpeakingQuestion': 'Sure.',
+  ''                        : 'Fine. Be that way!',
+  'Speaking'                : 'Whatever.',
+  'SpeakingShouting'        : 'Whoa, chill out!',
+  'SpeakingQuestion'        : 'Sure.',
   'SpeakingShoutingQuestion': 'Calm down, I know what I\'m doing!',
-  'Speaking': 'Whatever.',
-  '': 'Fine. Be that way!'
 };
 
 export default class Bob {
   hey(message) {
     const speaking = message.trim() ? 'Speaking' : '';
-    const shouting = CONTAINS_LETTERS.test(message)
-      && message.toUpperCase() === message
+    const shouting = HAS_UPPER.test(message) && message.toUpperCase() === message
         ? 'Shouting'
         : '';
     const question = message.endsWith('?') ? 'Question' : '';
     const whatsHappening = `${speaking}${shouting}${question}`;
+
     return RESPONSES[whatsHappening];
   }
 }

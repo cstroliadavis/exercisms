@@ -1,4 +1,4 @@
-const HAS_LETTERS = [...'xet'];
+const HAS_LETTERS = [...'abcdefghijklmnopqrstuvwxyz'];
 
 export default class Pangram {
   constructor(text){
@@ -8,6 +8,6 @@ export default class Pangram {
   isPangram(){
     return !!this.text &&
       HAS_LETTERS
-        .every(l => this.text.includes(l));
+        .every(l => this.text.toLowerCase().includes(l));
   }
 }

@@ -9,7 +9,7 @@ const RESPONSES = {
 
 export default class Bob {
   hey(message) {
-    const speaking = message ? 'Speaking' : '';
+    const speaking = message.trim() ? 'Speaking' : '';
     const shouting = CONTAINS_LETTERS.test(message)
       && message.toUpperCase() === message
         ? 'Shouting'

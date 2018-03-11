@@ -45,4 +45,13 @@ describe('Pangram()', () => {
     const pangram = new Pangram('Victor jagt zwölf Boxkämpfer quer über den großen Sylter Deich.');
     expect(pangram.isPangram()).toBe(true);
   });
+
+  test('pangram must contain at least 1 of every single letter', () => {
+    const ALPHA = 'abcdefghijklmnopqrstuvwxyz';
+    const LETTERS = [...ALPHA];
+    LETTERS.forEach(l => {
+      const pangram = new Pangram(ALPHA.replace(l, ''));
+      expect(pangram.isPangram()).toBe(false);
+    });
+  });
 });

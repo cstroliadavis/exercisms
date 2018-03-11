@@ -16,17 +16,17 @@ describe('Pangram()', () => {
     expect(pangram.isPangram()).toBe(false);
   });
 
-  xtest("another missing character 'x'", () => {
+  test("another missing character 'x'", () => {
     const pangram = new Pangram('the quick brown fish jumps over the lazy dog');
     expect(pangram.isPangram()).toBe(false);
   });
 
-  xtest('pangram with underscores', () => {
+  test('pangram with underscores', () => {
     const pangram = new Pangram('the_quick_brown_fox_jumps_over_the_lazy_dog');
     expect(pangram.isPangram()).toBe(true);
   });
 
-  xtest('pangram with numbers', () => {
+  test('pangram with numbers', () => {
     const pangram = new Pangram('the 1 quick brown fox jumps over the 2 lazy dogs');
     expect(pangram.isPangram()).toBe(true);
   });

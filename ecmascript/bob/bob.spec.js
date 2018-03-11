@@ -38,7 +38,7 @@ describe('Bob', () => {
     expect(result).toEqual('Whoa, chill out!');
   });
 
-  xtest('only numbers', () => {
+  test('only numbers', () => {
     const result = bob.hey('1, 2, 3');
     expect(result).toEqual('Whatever.');
   });

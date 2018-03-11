@@ -1,3 +1,4 @@
+const CONTAINS_LETTERS = /[a-z]+/i;
 const RESPONSES = {
   'Shouting': 'Whoa, chill out!',
   'Question': 'Sure.',
@@ -7,9 +8,12 @@ const RESPONSES = {
 
 export default class Bob {
   hey(message) {
-    let whatsHappening = '';
-    whatsHappening += message.toUpperCase() === message ? 'Shouting' : '';
-    whatsHappening += message.endsWith('?') ? 'Question' : '';
+    const shouting = CONTAINS_LETTERS.test(message)
+      && message.toUpperCase() === message
+        ? 'Shouting'
+        : '';
+    const question = message.endsWith('?') ? 'Question' : '';
+    const whatsHappening = `${shouting}${question}`;
     return RESPONSES[whatsHappening];
   }
 }

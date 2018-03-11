@@ -7,8 +7,12 @@
 export default class Bob {
   hey(message) {
     const isShouting = message.toUpperCase() === message;
+    const isQuestion = message.endsWith('?');
     if(isShouting){
       return 'Whoa, chill out!';
+    }
+    if(isQuestion){
+      return 'Sure.';
     }
     return 'Whatever.';
   }
